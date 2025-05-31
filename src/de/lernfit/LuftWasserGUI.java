@@ -4,6 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import javax.swing.border.EmptyBorder;
 
+/**
+ * Die LuftWasserGUI-Klasse implementiert eine grafische Benutzeroberfläche für die Kursanmeldung.
+ * Sie bietet Formularfelder für persönliche Daten und Kurspräferenzen und zeigt eine
+ * Zusammenfassung der eingegebenen Informationen an.
+ */
 public class LuftWasserGUI extends JFrame {
 	
     private JTextField nameField;
@@ -20,6 +25,10 @@ public class LuftWasserGUI extends JFrame {
         "Sachsen-Anhalt", "Schleswig-Holstein", "Thüringen"
     };
 
+     /**
+     * Konstruktor für die LuftWasserGUI-Klasse.
+     * Initialisiert die GUI-Komponenten und richtet das Layout ein.
+     */
     public LuftWasserGUI() {
         setTitle("LernFit - Kursanmeldung");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -108,7 +117,11 @@ public class LuftWasserGUI extends JFrame {
         setLocationRelativeTo(null);
         setMinimumSize(new Dimension(500, 600));
     }
-
+	
+    /**
+     * Aktualisiert den Zusammenfassungsbereich mit den aktuellen Formulardaten.
+     * Validiert die Eingaben und zeigt Fehlermeldungen an, wenn nötig.
+     */	
     private void updateSummary() {
         String name = nameField.getText().trim();
         if (name.isEmpty()) {
@@ -143,7 +156,10 @@ public class LuftWasserGUI extends JFrame {
         summaryArea.setText(summary.toString());
     }
 
-    private void resetForm() {
+     /**
+     * Setzt alle Formularfelder auf ihre Standardwerte zurück.
+     */
+     private void resetForm() {
         nameField.setText("");
         kursComboBox.setSelectedIndex(0);
         bundeslandComboBox.setSelectedIndex(0);
@@ -151,10 +167,23 @@ public class LuftWasserGUI extends JFrame {
         summaryArea.setText("");
     }
 
+     /**
+     * Überprüft, ob der eingegebene Name gültig ist.
+     * Ein gültiger Name darf nur aus Buchstaben bestehen.
+     * 
+     * @param name Der zu überprüfende Name
+     * @return true, wenn der Name nur aus Buchstaben besteht, sonst false
+     */
     private boolean isValidName(String name) {
         return name.matches("[a-zA-Z]+");
     }
 
+     /**
+     * Die Hauptmethode, die die GUI-Anwendung startet.
+     * Setzt das System-Look-and-Feel und macht das Hauptfenster sichtbar.
+     * 
+     * @param args Kommandozeilenargumente (werden nicht verwendet)
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             try {
