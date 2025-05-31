@@ -1,9 +1,19 @@
 package de.lernfit;
 
 import java.util.Scanner;
-
+/**
+ * Die LuftWasser-Klasse implementiert eine Konsolenanwendung zur Kursanmeldung.
+ * Sie ermöglicht Benutzern, persönliche Daten einzugeben und Kurspräferenzen festzulegen.
+ * Die Anwendung sammelt Informationen wie Name, Kurstyp, Bundesland und
+ * Erinnerungsintervalle für Wasserkonsum.
+ */
 public class LuftWasser {
 
+     /**
+     * Die Hauptmethode der Anwendung, die den Benutzeranmeldeprozess steuert.
+     * 
+     * @param args Kommandozeilenargumente (werden nicht verwendet)
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -66,6 +76,13 @@ public class LuftWasser {
         scanner.close();
     }
 
+     /**
+     * Überprüft, ob der eingegebene Name gültig ist.
+     * Ein gültiger Name darf nur aus Buchstaben bestehen.
+     * 
+     * @param name Der zu überprüfende Name
+     * @return true, wenn der Name nur aus Buchstaben besteht, sonst false
+     */
     private static boolean isValidName(String name) {
         return name.matches("[a-zA-Z]+");
     }
