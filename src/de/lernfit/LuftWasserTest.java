@@ -5,9 +5,19 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 
+/**
+ * Die LuftWasserTest-Klasse implementiert einen Test für die LuftWasser-Konsolenanwendung.
+ * Sie simuliert Benutzereingaben und überprüft, ob die Ausgabe des Programms den Erwartungen entspricht.
+ */
 public class LuftWasserTest {
 
-    public static void main(String[] args) {
+     /**
+     * Die Hauptmethode, die den Test ausführt.
+     * Simuliert Benutzereingaben, fängt die Programmausgabe ab und vergleicht sie mit der erwarteten Ausgabe.
+     * 
+     * @param args Kommandozeilenargumente (werden nicht verwendet)
+     */
+     public static void main(String[] args) {
     	
         // Simuliere Benutzereingaben
         String input = "Mohamed\n1\nBerlin\n30\n1\n";
