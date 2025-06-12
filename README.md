@@ -40,5 +40,6 @@ Die Testklasse demonstriert, wie die Konsolenversion mit simulierten Benutzerein
 ## Voraussetzungen
 - Java Development Kit (JDK) 11 oder höher
 - Java Swing (für die GUI-Version)
-
-- 
+## Technologie-Stack
+Java 8+ | Swing GUI | JUnit-Prinzipien | I/O-Streams | MVC-Architekturmuster
+  
